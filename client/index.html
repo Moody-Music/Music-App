@@ -22,33 +22,8 @@
     <div class="container mt-5" style="height: 100%">
 
         <h1 style="text-align: center;">Pick Your Music !</h1>
-        
-        <!-- Register -->
-        <div class="app mb-5" id="register">
-            <h1>Register</h1>
-
-            <form id="register-form">
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" class="form-control" id="email-register">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password-register">
-                </div>
-
-                <!-- id="btn-register" -->
-                <button class="btn btn-success" type="submit" >Register</button> | 
-                <button class="btn btn-primary" id="tologin"> To Log in</button><br><br>
-                
-                <!-- GOOGLE SIGNIN BUTTON -->
-                <div class="g-signin2" data-onsuccess="onSignIn" style="width: 190px;"></div>
-
-            </form>
-        </div>
-      
-        <!-- Login -->
+        <button class="app btn btn-danger" id="btn-logout"> Log Out</button>
+        <!-- Login Todo -->
         <div class="app mb-5" id="login">
             <h1>Login</h1>
         
@@ -65,13 +40,38 @@
 
                 <!-- id="btn-login"  -->
                 <button class="btn btn-success" type="submit">Log in</button> | 
-                <button class="btn btn-primary" id="toRegister"> To Register</button><br><br>
+                <button class="btn btn-primary" id="btn-gotoregister"> To Register</button><br><br>
                 
                 <!-- GOOGLE SIGNIN BUTTON -->
                 <div class="g-signin2" data-onsuccess="onSignIn" style="width: 190px;"></div>
             </form>
 
         </div>
+        
+        <!-- Register Todo -->
+        <div class="app mb-5" id="register">
+            <h1>Register</h1>
+
+            <form id="register-form">
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email-register">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password-register">
+                </div>
+
+                <!-- id="btn-register" -->
+                <button class="btn btn-success" type="submit" >Register</button> | 
+                <button class="btn btn-primary" id="btn-gotologin"> To Log in</button><br><br>
+                
+                <!-- GOOGLE SIGNIN BUTTON -->
+                <div class="g-signin2" data-onsuccess="onSignIn" style="width: 190px;"></div>
+            </form>
+        </div>
+
 
     </div>
 
@@ -85,7 +85,7 @@
     <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
     <!-- FETCH Scripts -->
-    <!-- <script src="./scripts/docReady.js"></script>
-    <script src="./scripts/functions.js"></script> -->
+    <script src="./scripts/functions.js"></script>
+    <script src="./scripts/docReady.js"></script>
 </body>
 </html>
