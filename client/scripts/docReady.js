@@ -18,6 +18,7 @@ $(document).ready(function(){
       .done(data=>{
         console.log(data);
         localStorage.setItem('token', data.token);
+        $("#emailname").text(localStorage.email)
         home();
       })
       .fail(err=>{
@@ -49,10 +50,13 @@ $(document).ready(function(){
 function auth(){
   if(localStorage.length==0){
     $('.app').hide();
-    $('#login').show();
+    $('#login').show(500);
+    $('#main').hide();
   } else {
     $('.app').hide();
-    $('#btn-logout').show();
+    $('#btn-logout').show(500);
+    $('#emailname').show(500);
+    $('#main').show(500);
   }
 }
 
@@ -74,7 +78,7 @@ $('#btn-logout').click(function(e){
   auth2.signOut().then(function () {
   });
   localStorage.clear();
-  $(".app").hide(500);
+  $(".app").hide();
   $("#login").show(500);
 });
 
