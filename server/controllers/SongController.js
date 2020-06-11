@@ -31,6 +31,11 @@ class SongController{
         })
     }
     static async songByMood (req, res, next) {
+        if(!SongController.listMood[req.params.mood]){
+            res.status(404).json({
+                message: "Mood not available"
+            })
+        }
         const requestUrl = `${SongController.baseUrl}/playlist/${SongController.listMood[req.params.mood]}`
         try{
             const response = await axios.get(requestUrl)
