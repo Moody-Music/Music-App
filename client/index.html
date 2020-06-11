@@ -13,16 +13,37 @@
     <!-- tab icon -->
     <link rel="icon" href="logo.jpg">
     <title>Moody Music</title>
+
+    <style>
+        body{
+            /* background-color: rgba(255, 255, 255, 0.795); */
+            background-image: url('./play3.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: whitesmoke;
+        }
+        .logohome {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+    </style>
 </head>
 <body>
     
-    
+    <nav class="navbar navbar-light bg-warning">
+        <form class="form-inline">
+            <img src="logo.jpg" class="logohome d-inline-block align-top" loading="lazy">
+            <div class="navbar-brand ml-2">Moody Music</div>
+        </form>
+        <button class="app btn btn-light" id="btn-logout"> Log Out</button>
+    </nav>
     
     <!-- ENTER CODE HERE -->
     <div class="container mt-5" style="height: 100%">
-
         <h1 style="text-align: center;">Pick Your Music !</h1>
-        <button class="app btn btn-danger" id="btn-logout"> Log Out</button>
+        <h6 class="app" id="emailname" style="text-align: center;"></h6>
         <!-- Login Todo -->
         <div class="app mb-5" id="login">
             <h1>Login</h1>
@@ -72,6 +93,10 @@
             </form>
         </div>
 
+        <!-- MAIN -->
+        <div class="app mb-5" id="main"><hr>
+            <h2>This is Main Page</h2>
+        </div>
 
     </div>
 
