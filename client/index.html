@@ -108,14 +108,13 @@
 
         <!-- MAIN -->
         <div class="app mb-5" id="main"><hr>
-
+            <iframe id="giphy" src="" width="427" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
             <!-- Dropdown genre -->
             <form style="margin-left: 42%;">
                 <div class="form-row align-items-center">
                     <div class="col-auto my-1">
                         <select onchange="fetchSongs(value)" class="custom-select mr-sm-2 btn-primary" id="inlineFormCustomSelect">
                           <option selected>Select Genre</option>
-                          <option value="senang">Senang DUMMY</option>
                           <option value="happy">Happy</option>
                           <option value="sad">Sad</option>
                           <option value="in_love">In Love</option>
@@ -138,7 +137,7 @@
             <!-- Audio Player -->
             <div id="wrapper" class="box">
                 <audio preload="auto" controls>
-                            <source src="http://cdn-preview-1.deezer.com/stream/c-1025bdbc62aee2b32bf1a377bee6c9a6-4.mp3">
+                            <source id="sourceAudio" src="http://cdn-preview-1.deezer.com/stream/c-1025bdbc62aee2b32bf1a377bee6c9a6-4.mp3">
                 </audio>
             </div>
             

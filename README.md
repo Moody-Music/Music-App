@@ -3,17 +3,13 @@
 > - Register
 > - Login
 > - Login with Google
-> - Play 5 Songs with Liric based on Your Mood
-
+> - Play 5 Songs with Lyric based on Your Mood
 `environment variables: (.env)`
-
 > - PORT=
 > - SECRET=
 > - CLIENT_ID=
-
 `link deploy:`
 > - _optional_
-
 `Moody-Music Guides:`
 > - Log In - this button automatically guide you to our main page
 > - Register - this button automatically store your user data to the application
@@ -22,10 +18,8 @@
 > - Select Genre (dropdown) - shows you the number of genres given
 > - Play icon - Play the selected music
 > - View Lyrics - this button will provide you lyric of the selected music. It comes with a confirmation Modal.
-
 &nbsp;
 # RESTful endpoints
-
 ## Global Responses
 _Response (500 - Unknown error)_
 > This endpoint should always return response below,
@@ -34,9 +28,7 @@ _Response (500 - Unknown error)_
 ```
 ---
 ## POST /register
-
 > Create a new user account
-
 _Request Header_
 ```
   no need
@@ -66,9 +58,7 @@ _Response (400 - Bad Request)_
 ```
 ---
 ## POST /login
-
 > Create a new user account
-
 _Request Header_
 ```
   no need
@@ -95,9 +85,7 @@ _Response (400 - Bad request)_
 ```
 ---
 ## POST /google-signin
-
 > Google sign in 
-
 _Request Header_
 ```
   no need
@@ -117,9 +105,7 @@ _Response (200)_
 ```
 ---
 ## GET /songs/:mood
-
 > Show five random songs for one to be selected
-
 _Request Header_
 ```
 {
@@ -173,3 +159,22 @@ _Response (200)_
 }
 ```
 ---
+## GET /giphy/:mood
+> Show Giphy after selected song 
+_Request Params_
+```
+{
+    "mood": <given mood>
+}
+```
+_Request Body_
+```
+  no need
+```
+_Response (200)_
+```
+{
+    "id": <listed id>,
+    "embed_url": <listed embed_url>
+}
+```

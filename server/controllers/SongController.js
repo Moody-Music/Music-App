@@ -1,14 +1,10 @@
 const axios = require('axios')
+const jsonMoods = require('../data/mood.json')
 
 class SongController{
     static baseUrl = 'http://api.deezer.com'
     static sourceLyrics = 'https://api.lyrics.ovh/v1'
-    static listMood = {
-        senang: 7644900062,
-        sedih: 7644761062,
-        galau: 7644919622,
-        semangat: 7644907862 
-    }
+    static listMood = jsonMoods
     static randomSong(songs, count) {
         let listSong = []
         while(listSong.length < count){
@@ -26,7 +22,7 @@ class SongController{
                   resolve(data.lyrics)
               })
               .catch(err => {
-                  resolve('Not Available')
+                  resolve('Cannot find lyrics of this song')
               })
         })
     }
