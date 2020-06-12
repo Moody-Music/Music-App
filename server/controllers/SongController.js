@@ -22,7 +22,7 @@ class SongController{
                   resolve(data.lyrics)
               })
               .catch(err => {
-                  resolve('Not Available')
+                  resolve('Cannot find lyrics of this song')
               })
         })
     }
