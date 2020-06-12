@@ -84,4 +84,5 @@ $('#btn-logout').click(function(e){
 
 function home(){
   auth();
+  fetchSongs('galau')
 }
