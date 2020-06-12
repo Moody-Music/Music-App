@@ -15,3 +15,15 @@ function onSignIn(googleUser) {
   .done((data) => {console.log('sukses login Google')})
   .fail( err => { console.log('gagal register')})
 }
+
+function fetchSongs(mood){
+  $.ajax({
+      method: "GET",
+      url: `http://localhost:3000/songs/${mood}`,
+      success: function(data){
+          console.log(data)
+      }
+  })
+  .done((data) => { console.log('sukses fetch songs')})
+  .fail(err => { console.log('gagal fetch songs')})
+}
