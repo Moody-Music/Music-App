@@ -26,10 +26,11 @@ function changeAudio(source){
 function fetchGIFs(mood){
   $.ajax({
     method: "GET",
-    url: `http://localhost:3000/songs/${mood}`
+    url: `http://localhost:3000/giphy/${mood}`
   })
   .done((data) => {
-
+    console.log('masuk giphy')
+    $("#giphy").attr('src', data.gifs[0].embed_url)
   })
   .fail(err => {
     console.log(err)
@@ -43,6 +44,7 @@ function fetchSongs(mood){
   })
   .done((data) => { 
     //   console.log('sukses fetch songs=======', data)
+        fetchGIFs(mood)
         $('#sourceAudio').attr('src', data.songs[0].preview)
         $('audio')[0].pause()
         $('audio')[0].load()

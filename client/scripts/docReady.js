@@ -57,7 +57,6 @@ function auth(){
     $('#btn-logout').show(500);
     $('#emailname').show(500);
     $('#main').show(500);
-    fetchSongs('senang')
   }
 }
 
@@ -85,5 +84,4 @@ $('#btn-logout').click(function(e){
 
 function home(){
   auth();
-  fetchSongs('galau')
 }
